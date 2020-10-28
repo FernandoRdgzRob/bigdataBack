@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 import javax.validation.Valid;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -19,8 +21,8 @@ public class EstadoController {
     private EstadoRepository estadoRepository;
 
     @GetMapping("/estados")
-    public Page<Estado> getEstados(Pageable pageable) {
-        return estadoRepository.findAll(pageable);
+    public List<Estado> getEstados() {
+        return estadoRepository.findAll();
     }
   
     

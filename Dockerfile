@@ -11,13 +11,13 @@ VOLUME /tmp
 EXPOSE 8115
 
 # The application's jar file
-ARG JAR_FILE=target/SpringBootjwtAuthentication-0.0.1.jar
+ARG JAR_FILE=target/SpringBootJwtAuthentication-0.0.1.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} SpringBootjwtAuthentication.jar
+ADD ${JAR_FILE} SpringBootJwtAuthentication.jar
 
 # Run the jar file 
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/SpringBootjwtAuthentication.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/SpringBootJwtAuthentication.jar"]
 
 # docker build
 # sudo docker build -t <dockerhub-user>/ng5-api .

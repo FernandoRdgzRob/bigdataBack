@@ -8,7 +8,7 @@ LABEL maintainer="fercholik"
 VOLUME /tmp
 
 # Make port 8080 available to the world outside this container
-EXPOSE 8115
+EXPOSE 8116
 
 # The application's jar file
 ARG JAR_FILE=target/SpringBootJwtAuthentication-0.0.1.jar
@@ -20,7 +20,7 @@ ADD ${JAR_FILE} ng5-api.jar
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/ng5-api.jar"]
 
 # docker build
-# sudo docker build -t feercholik/ng5-api .
+# sudo docker build -t alan/ng5-api .
 
 # docker run
-# sudo docker run --name fernando-mapa-api -p 8115:8080 -d feercholik/ng5-api
+# sudo docker run --name alan-mapa-api -p 8116:8080 -d alan/ng5-api
